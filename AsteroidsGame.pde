@@ -20,6 +20,6 @@ public void draw()
 //public void keyPressed()
 {
 	if(key == 'a'){
-		
+		ymca.setDirectionX(50);
 	}
 }
