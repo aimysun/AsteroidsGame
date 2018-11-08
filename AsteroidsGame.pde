@@ -12,14 +12,32 @@ public void draw()
 {
   background(0);
   ymca.show();
+  ymca.move();
   for (int i = 0; i < nightSky.length; i++){
   	nightSky[i].show();
   }
 }
 
-//public void keyPressed()
+public void keyPressed()
 {
-	if(key == 'a'){
-		ymca.setDirectionX(50);
+	if(keyCode == LEFT){
+		ymca.turn(-15);
 	}
+	if(keyCode == RIGHT){
+		ymca.turn(15);
+	}
+	if(keyCode == 38) { //up key
+      ymca.accelerate(.01);
+    }
+    if(keyCode == DOWN) { // down key
+      ymca.accelerate(-.01);
+	}
+	if(keyCode == 79){ // o key
+	   ymca.setDirectionX(0);
+       ymca.setDirectionY(0);
+       ymca.setX((int)(Math.random()*500));
+       ymca.setY((int)(Math.random()*500));
+       ymca.setPointDirection((int)(Math.random()*360));
+	} 
+	
 }
