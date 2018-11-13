@@ -27,10 +27,10 @@ public void keyPressed()
 		ymca.turn(15);
 	}
 	if(keyCode == 38) { //up key
-      ymca.accelerate(.01);
+      ymca.accelerate(.3);
     }
     if(keyCode == DOWN) { // down key
-      ymca.accelerate(-.01);
+      ymca.accelerate(-.3);
 	}
 	if(keyCode == 79){ // o key
 	   ymca.setDirectionX(0);
