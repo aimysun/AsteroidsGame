@@ -24,6 +24,15 @@ public void draw()
   	stones.get(i).show();
   	stones.get(i).move();
   }
+  for(int i = 0; i < stones.size(); i++)
+	{
+		stones.get(i).show();
+		stones.get(i).move();
+		if(dist(stones.get(i).getX(), stones.get(i).getY(), ymca.getX(), ymca.getY()) < 30 + 2)
+		{
+			stones.remove(i);
+		}
+	}
 }
 
 public void keyPressed()
