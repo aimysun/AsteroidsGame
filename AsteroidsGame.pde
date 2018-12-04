@@ -1,11 +1,15 @@
 Spaceship ymca;
 Star[] nightSky = new Star[200];
+ArrayList <Asteroid> stones = new ArrayList <Asteroid>();
 public void setup() 
 {
 	size(500, 500);
 	ymca = new Spaceship();
 	for(int i = 0; i < nightSky.length; i++){
 		nightSky[i] = new Star();
+	}
+	for(int i = 0; i < 20; i++){
+		stones.add(new Asteroid());
 	}
 }
 public void draw() 
@@ -15,6 +19,10 @@ public void draw()
   ymca.move();
   for (int i = 0; i < nightSky.length; i++){
   	nightSky[i].show();
+  }
+  for(int i = 0; i < stones.size(); i++){
+  	stones.get(i).show();
+  	stones.get(i).move();
   }
 }
 
